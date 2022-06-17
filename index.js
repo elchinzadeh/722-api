@@ -34,3 +34,5 @@ app.get('/:prefix/projects', (req, res) => { res.json(data.projects) })
 app.listen(7722, () => {
     console.log('Listening on :7722')
 })
+
+module.exports = app;
