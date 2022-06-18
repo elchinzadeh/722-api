@@ -1,7 +1,10 @@
 const express = require('express')
+const cors = require('cors')
 const data = require('./data')
 
 const app = express()
+
+app.use(cors())
 
 const users = {
     'aytac': { name: 'Aytac Mehtizadə' },
@@ -17,8 +20,8 @@ const users = {
 app.get('/', (req, res) => {
     res.send(`
         <h3>With prefix</h3>
-        /:user/configuration<br/>
         /:user/languages<br/>
+        /:user/configuration<br/>
         /:user/profile<br/>
         /:user/workingProcess<br/>
         /:user/skills<br/>
